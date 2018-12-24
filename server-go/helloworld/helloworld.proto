@@ -9,7 +9,7 @@ package helloworld;
 // The greeting service definition.
 service Greeter {
   // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc SayHello (HelloRequest) returns (Data) {}
 }
 
 // The request message containing the user's name.
@@ -20,4 +20,32 @@ message HelloRequest {
 // The response message containing the greetings
 message HelloReply {
   string message = 1;
+}
+
+
+message Data {
+  string a = 1;
+  string b = 2;
+  string c = 3;
+  string d = 4;
+  string e = 5;
+  string f = 6;
+  string g = 7;
+  string h = 8;
+  float i = 9;
+  float j = 10;
+  float k = 11;
+  float l = 12;
+  float m = 13;
+  float n = 14;
+  float o = 15;
+  float p = 16;
+  int64 q = 17;
+  int64 r = 18;
+  int64 s = 19;
+  int64 t = 20;
+  int64 u = 21;
+  int64 v = 22;
+  int64 w = 23;
+  int64 x = 24;
 }

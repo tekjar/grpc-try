@@ -35,7 +35,7 @@ func (m *HelloRequest) Reset()         { *m = HelloRequest{} }
 func (m *HelloRequest) String() string { return proto.CompactTextString(m) }
 func (*HelloRequest) ProtoMessage()    {}
 func (*HelloRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_helloworld_4b7772fad6e528b5, []int{0}
+	return fileDescriptor_helloworld_8a1399eb9c93a720, []int{0}
 }
 func (m *HelloRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_HelloRequest.Unmarshal(m, b)
@@ -74,7 +74,7 @@ func (m *HelloReply) Reset()         { *m = HelloReply{} }
 func (m *HelloReply) String() string { return proto.CompactTextString(m) }
 func (*HelloReply) ProtoMessage()    {}
 func (*HelloReply) Descriptor() ([]byte, []int) {
-	return fileDescriptor_helloworld_4b7772fad6e528b5, []int{1}
+	return fileDescriptor_helloworld_8a1399eb9c93a720, []int{1}
 }
 func (m *HelloReply) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_HelloReply.Unmarshal(m, b)
@@ -101,9 +101,232 @@ func (m *HelloReply) GetMessage() string {
 	return ""
 }
 
+type Data struct {
+	A                    string   `protobuf:"bytes,1,opt,name=a,proto3" json:"a,omitempty"`
+	B                    string   `protobuf:"bytes,2,opt,name=b,proto3" json:"b,omitempty"`
+	C                    string   `protobuf:"bytes,3,opt,name=c,proto3" json:"c,omitempty"`
+	D                    string   `protobuf:"bytes,4,opt,name=d,proto3" json:"d,omitempty"`
+	E                    string   `protobuf:"bytes,5,opt,name=e,proto3" json:"e,omitempty"`
+	F                    string   `protobuf:"bytes,6,opt,name=f,proto3" json:"f,omitempty"`
+	G                    string   `protobuf:"bytes,7,opt,name=g,proto3" json:"g,omitempty"`
+	H                    string   `protobuf:"bytes,8,opt,name=h,proto3" json:"h,omitempty"`
+	I                    float32  `protobuf:"fixed32,9,opt,name=i,proto3" json:"i,omitempty"`
+	J                    float32  `protobuf:"fixed32,10,opt,name=j,proto3" json:"j,omitempty"`
+	K                    float32  `protobuf:"fixed32,11,opt,name=k,proto3" json:"k,omitempty"`
+	L                    float32  `protobuf:"fixed32,12,opt,name=l,proto3" json:"l,omitempty"`
+	M                    float32  `protobuf:"fixed32,13,opt,name=m,proto3" json:"m,omitempty"`
+	N                    float32  `protobuf:"fixed32,14,opt,name=n,proto3" json:"n,omitempty"`
+	O                    float32  `protobuf:"fixed32,15,opt,name=o,proto3" json:"o,omitempty"`
+	P                    float32  `protobuf:"fixed32,16,opt,name=p,proto3" json:"p,omitempty"`
+	Q                    int64    `protobuf:"varint,17,opt,name=q,proto3" json:"q,omitempty"`
+	R                    int64    `protobuf:"varint,18,opt,name=r,proto3" json:"r,omitempty"`
+	S                    int64    `protobuf:"varint,19,opt,name=s,proto3" json:"s,omitempty"`
+	T                    int64    `protobuf:"varint,20,opt,name=t,proto3" json:"t,omitempty"`
+	U                    int64    `protobuf:"varint,21,opt,name=u,proto3" json:"u,omitempty"`
+	V                    int64    `protobuf:"varint,22,opt,name=v,proto3" json:"v,omitempty"`
+	W                    int64    `protobuf:"varint,23,opt,name=w,proto3" json:"w,omitempty"`
+	X                    int64    `protobuf:"varint,24,opt,name=x,proto3" json:"x,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Data) Reset()         { *m = Data{} }
+func (m *Data) String() string { return proto.CompactTextString(m) }
+func (*Data) ProtoMessage()    {}
+func (*Data) Descriptor() ([]byte, []int) {
+	return fileDescriptor_helloworld_8a1399eb9c93a720, []int{2}
+}
+func (m *Data) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Data.Unmarshal(m, b)
+}
+func (m *Data) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Data.Marshal(b, m, deterministic)
+}
+func (dst *Data) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Data.Merge(dst, src)
+}
+func (m *Data) XXX_Size() int {
+	return xxx_messageInfo_Data.Size(m)
+}
+func (m *Data) XXX_DiscardUnknown() {
+	xxx_messageInfo_Data.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Data proto.InternalMessageInfo
+
+func (m *Data) GetA() string {
+	if m != nil {
+		return m.A
+	}
+	return ""
+}
+
+func (m *Data) GetB() string {
+	if m != nil {
+		return m.B
+	}
+	return ""
+}
+
+func (m *Data) GetC() string {
+	if m != nil {
+		return m.C
+	}
+	return ""
+}
+
+func (m *Data) GetD() string {
+	if m != nil {
+		return m.D
+	}
+	return ""
+}
+
+func (m *Data) GetE() string {
+	if m != nil {
+		return m.E
+	}
+	return ""
+}
+
+func (m *Data) GetF() string {
+	if m != nil {
+		return m.F
+	}
+	return ""
+}
+
+func (m *Data) GetG() string {
+	if m != nil {
+		return m.G
+	}
+	return ""
+}
+
+func (m *Data) GetH() string {
+	if m != nil {
+		return m.H
+	}
+	return ""
+}
+
+func (m *Data) GetI() float32 {
+	if m != nil {
+		return m.I
+	}
+	return 0
+}
+
+func (m *Data) GetJ() float32 {
+	if m != nil {
+		return m.J
+	}
+	return 0
+}
+
+func (m *Data) GetK() float32 {
+	if m != nil {
+		return m.K
+	}
+	return 0
+}
+
+func (m *Data) GetL() float32 {
+	if m != nil {
+		return m.L
+	}
+	return 0
+}
+
+func (m *Data) GetM() float32 {
+	if m != nil {
+		return m.M
+	}
+	return 0
+}
+
+func (m *Data) GetN() float32 {
+	if m != nil {
+		return m.N
+	}
+	return 0
+}
+
+func (m *Data) GetO() float32 {
+	if m != nil {
+		return m.O
+	}
+	return 0
+}
+
+func (m *Data) GetP() float32 {
+	if m != nil {
+		return m.P
+	}
+	return 0
+}
+
+func (m *Data) GetQ() int64 {
+	if m != nil {
+		return m.Q
+	}
+	return 0
+}
+
+func (m *Data) GetR() int64 {
+	if m != nil {
+		return m.R
+	}
+	return 0
+}
+
+func (m *Data) GetS() int64 {
+	if m != nil {
+		return m.S
+	}
+	return 0
+}
+
+func (m *Data) GetT() int64 {
+	if m != nil {
+		return m.T
+	}
+	return 0
+}
+
+func (m *Data) GetU() int64 {
+	if m != nil {
+		return m.U
+	}
+	return 0
+}
+
+func (m *Data) GetV() int64 {
+	if m != nil {
+		return m.V
+	}
+	return 0
+}
+
+func (m *Data) GetW() int64 {
+	if m != nil {
+		return m.W
+	}
+	return 0
+}
+
+func (m *Data) GetX() int64 {
+	if m != nil {
+		return m.X
+	}
+	return 0
+}
+
 func init() {
 	proto.RegisterType((*HelloRequest)(nil), "helloworld.HelloRequest")
 	proto.RegisterType((*HelloReply)(nil), "helloworld.HelloReply")
+	proto.RegisterType((*Data)(nil), "helloworld.Data")
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -119,7 +342,7 @@ const _ = grpc.SupportPackageIsVersion4
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type GreeterClient interface {
 	// Sends a greeting
-	SayHello(ctx context.Context, in *HelloRequest, opts ...grpc.CallOption) (*HelloReply, error)
+	SayHello(ctx context.Context, in *HelloRequest, opts ...grpc.CallOption) (*Data, error)
 }
 
 type greeterClient struct {
@@ -130,8 +353,8 @@ func NewGreeterClient(cc *grpc.ClientConn) GreeterClient {
 	return &greeterClient{cc}
 }
 
-func (c *greeterClient) SayHello(ctx context.Context, in *HelloRequest, opts ...grpc.CallOption) (*HelloReply, error) {
-	out := new(HelloReply)
+func (c *greeterClient) SayHello(ctx context.Context, in *HelloRequest, opts ...grpc.CallOption) (*Data, error) {
+	out := new(Data)
 	err := c.cc.Invoke(ctx, "/helloworld.Greeter/SayHello", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -142,7 +365,7 @@ func (c *greeterClient) SayHello(ctx context.Context, in *HelloRequest, opts ...
 // GreeterServer is the server API for Greeter service.
 type GreeterServer interface {
 	// Sends a greeting
-	SayHello(context.Context, *HelloRequest) (*HelloReply, error)
+	SayHello(context.Context, *HelloRequest) (*Data, error)
 }
 
 func RegisterGreeterServer(s *grpc.Server, srv GreeterServer) {
@@ -180,19 +403,29 @@ var _Greeter_serviceDesc = grpc.ServiceDesc{
 	Metadata: "helloworld.proto",
 }
 
-func init() { proto.RegisterFile("helloworld.proto", fileDescriptor_helloworld_4b7772fad6e528b5) }
+func init() { proto.RegisterFile("helloworld.proto", fileDescriptor_helloworld_8a1399eb9c93a720) }
 
-var fileDescriptor_helloworld_4b7772fad6e528b5 = []byte{
-	// 175 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x12, 0xc8, 0x48, 0xcd, 0xc9,
-	0xc9, 0x2f, 0xcf, 0x2f, 0xca, 0x49, 0xd1, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0xe2, 0x42, 0x88,
-	0x28, 0x29, 0x71, 0xf1, 0x78, 0x80, 0x78, 0x41, 0xa9, 0x85, 0xa5, 0xa9, 0xc5, 0x25, 0x42, 0x42,
-	0x5c, 0x2c, 0x79, 0x89, 0xb9, 0xa9, 0x12, 0x8c, 0x0a, 0x8c, 0x1a, 0x9c, 0x41, 0x60, 0xb6, 0x92,
-	0x1a, 0x17, 0x17, 0x54, 0x4d, 0x41, 0x4e, 0xa5, 0x90, 0x04, 0x17, 0x7b, 0x6e, 0x6a, 0x71, 0x71,
-	0x62, 0x3a, 0x4c, 0x11, 0x8c, 0x6b, 0xe4, 0xc9, 0xc5, 0xee, 0x5e, 0x94, 0x9a, 0x5a, 0x92, 0x5a,
-	0x24, 0x64, 0xc7, 0xc5, 0x11, 0x9c, 0x58, 0x09, 0xd6, 0x25, 0x24, 0xa1, 0x87, 0xe4, 0x02, 0x64,
-	0xcb, 0xa4, 0xc4, 0xb0, 0xc8, 0x14, 0xe4, 0x54, 0x2a, 0x31, 0x38, 0x19, 0x70, 0x49, 0x67, 0xe6,
-	0xeb, 0xa5, 0x17, 0x15, 0x24, 0xeb, 0xa5, 0x56, 0x24, 0xe6, 0x16, 0xe4, 0xa4, 0x16, 0x23, 0xa9,
-	0x75, 0xe2, 0x07, 0x2b, 0x0e, 0x07, 0xb1, 0x03, 0x40, 0x5e, 0x0a, 0x60, 0x4c, 0x62, 0x03, 0xfb,
-	0xcd, 0x18, 0x10, 0x00, 0x00, 0xff, 0xff, 0x0f, 0xb7, 0xcd, 0xf2, 0xef, 0x00, 0x00, 0x00,
+var fileDescriptor_helloworld_8a1399eb9c93a720 = []byte{
+	// 323 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x4c, 0xd2, 0x3b, 0x4f, 0x3a, 0x41,
+	0x14, 0x05, 0xf0, 0xff, 0x00, 0x7f, 0x1e, 0x23, 0x0a, 0x8e, 0xaf, 0x13, 0x6d, 0xc8, 0x16, 0x86,
+	0x6a, 0x63, 0xb4, 0xb1, 0x46, 0x13, 0x2d, 0xc9, 0x5a, 0x58, 0x0f, 0x30, 0x2c, 0x8f, 0x59, 0x66,
+	0x99, 0x5d, 0x5e, 0x5f, 0xd4, 0xcf, 0x63, 0xee, 0x5e, 0x88, 0xdb, 0xdd, 0xdf, 0xdc, 0x93, 0x69,
+	0xce, 0x95, 0xdd, 0x99, 0xb1, 0xd6, 0xed, 0x9c, 0xb7, 0x93, 0x30, 0xf5, 0x2e, 0x77, 0x4a, 0xfe,
+	0xbd, 0x04, 0x81, 0x6c, 0x7f, 0x92, 0x22, 0xb3, 0xde, 0x98, 0x2c, 0x57, 0x4a, 0xd6, 0x56, 0x3a,
+	0x31, 0x10, 0x3d, 0xd1, 0x6f, 0x45, 0xc5, 0x1c, 0x3c, 0x4a, 0x79, 0xcc, 0xa4, 0xf6, 0xa0, 0x20,
+	0x1b, 0x89, 0xc9, 0x32, 0x1d, 0x9f, 0x42, 0x27, 0x06, 0x3f, 0x15, 0x59, 0x7b, 0xd7, 0xb9, 0x56,
+	0x6d, 0x29, 0xf4, 0x71, 0x29, 0x0a, 0x8d, 0x50, 0x61, 0x8d, 0x48, 0x63, 0x54, 0x59, 0x63, 0xd2,
+	0x04, 0x35, 0xd6, 0x84, 0x64, 0xf0, 0x9f, 0x65, 0x48, 0x53, 0xd4, 0x59, 0x53, 0x52, 0x8c, 0x06,
+	0x2b, 0x26, 0xcd, 0xd0, 0x64, 0xcd, 0x48, 0x73, 0xb4, 0x7a, 0xa2, 0x5f, 0x89, 0xc4, 0x9c, 0xb4,
+	0x80, 0x64, 0x2d, 0x48, 0x4b, 0x9c, 0xb1, 0x96, 0x24, 0x8b, 0x36, 0xcb, 0x92, 0x12, 0x9c, 0xb3,
+	0x12, 0xd2, 0x0a, 0x17, 0xac, 0x15, 0xc9, 0xa1, 0xc3, 0x72, 0xa4, 0x14, 0x5d, 0x56, 0x4a, 0x5a,
+	0xe3, 0xb2, 0x27, 0xfa, 0xd5, 0x48, 0xac, 0x49, 0x1e, 0x8a, 0xe5, 0x49, 0x19, 0xae, 0x58, 0x19,
+	0x29, 0xc7, 0x35, 0x2b, 0x27, 0x6d, 0x70, 0xc3, 0xda, 0x90, 0xb6, 0xb8, 0x65, 0x6d, 0x49, 0x3b,
+	0xdc, 0xb1, 0x76, 0xa4, 0x3d, 0xc0, 0xda, 0x3f, 0xbf, 0xc9, 0xc6, 0x87, 0x37, 0x26, 0x37, 0x5e,
+	0xbd, 0xca, 0xe6, 0x97, 0x3e, 0x14, 0x75, 0x28, 0x84, 0xa5, 0x6a, 0xcb, 0x2d, 0xde, 0x77, 0xcb,
+	0x1b, 0xaa, 0x24, 0xf8, 0x37, 0x78, 0x92, 0x0f, 0x73, 0x17, 0xc6, 0x3e, 0x1d, 0x87, 0x66, 0xaf,
+	0x93, 0xd4, 0x9a, 0xac, 0x94, 0x1a, 0x74, 0x8a, 0x0f, 0xbe, 0x69, 0x1e, 0xd2, 0x95, 0x0c, 0xc5,
+	0xa8, 0x5e, 0x9c, 0xcb, 0xcb, 0x6f, 0x00, 0x00, 0x00, 0xff, 0xff, 0x19, 0xf9, 0x83, 0x8d, 0x42,
+	0x02, 0x00, 0x00,
 }
