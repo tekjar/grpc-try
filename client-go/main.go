@@ -75,16 +75,16 @@ func main() {
 	exit := make(chan bool, 1)
 
 	go profileSystem(exit)
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < 3000; i++ {
 		ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 		defer cancel()
 		r, err := c.SayHello(ctx, &helloworld.HelloRequest{Name: name})
-		_ = r
+
 		if err != nil {
 			log.Fatalf("could not greet: %v", err)
 		}
 
-		// log.Printf("Greeting: %s", r.A)
+		log.Printf("Greeting: %s", r.A)
 		time.Sleep(100 * time.Millisecond)
 	}
 
