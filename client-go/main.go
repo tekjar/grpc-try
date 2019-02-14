@@ -1,7 +1,7 @@
 package main
 
 import (
-	"client/helloworld"
+	"client/notification"
 	"context"
 	"fmt"
 	"log"
@@ -14,7 +14,7 @@ import (
 
 const (
 	address     = "localhost:50051"
-	defaultName = "world"
+	defaultName = "client"
 )
 
 func profileSystem(exit chan bool) {
@@ -68,24 +68,36 @@ func main() {
 		log.Fatalf("did not connect: %v", err)
 	}
 	defer conn.Close()
-	c := helloworld.NewGreeterClient(conn)
+	c := notification.NewGreeterClient(conn)
 
 	// Contact the server and print out its response.
 	name := defaultName
 	exit := make(chan bool, 1)
 
-	go profileSystem(exit)
-	for i := 0; i < 3000; i++ {
+	// go profileSystem(exit)
+	for i := 0; i < 100; i++ {
 		ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 		defer cancel()
-		r, err := c.SayHello(ctx, &helloworld.HelloRequest{Name: name})
+		r, err := c.SayHello(ctx, &notification.HelloRequest{Name: name})
+		log.Printf("Client Greeting: Hello server")
 
 		if err != nil {
 			log.Fatalf("could not greet: %v", err)
 		}
 
-		log.Printf("Greeting: %s", r.A)
+		log.Printf("Server Greeting: %s", r)
 		time.Sleep(100 * time.Millisecond)
+	}
+
+	stream, err := c.ManyHellos(context.Background())
+	if err != nil {
+		log.Fatalf("%v.RecordRoute(_) = _, %v", c, err)
+	}
+
+	for i := 0; i < 100; i++ {
+		if err := stream.Send(&notification.HelloRequest{Name: name}); err != nil {
+			log.Fatalf("%v.Send() = %v", stream, err)
+		}
 	}
 
 	exit <- true
