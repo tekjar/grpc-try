@@ -74,8 +74,12 @@ func main() {
 	name := defaultName
 	exit := make(chan bool, 1)
 
-	// go profileSystem(exit)
-	for i := 0; i < 100; i++ {
+	go profileSystem(exit)
+	time.Sleep(3 * time.Second)
+	fmt.Println("Starts profiling in 5 seconds")
+	time.Sleep(5 * time.Second)
+
+	for i := 0; i < 300; i++ {
 		ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 		defer cancel()
 		r, err := c.SayHello(ctx, &notification.HelloRequest{Name: name})
@@ -97,6 +101,7 @@ func main() {
 	for i := 0; i < 100; i++ {
 		if err := stream.Send(&notification.HelloRequest{Name: name}); err != nil {
 			log.Fatalf("%v.Send() = %v", stream, err)
+			time.Sleep(10 * time.Millisecond)
 		}
 	}
 
