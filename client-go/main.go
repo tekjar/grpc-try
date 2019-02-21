@@ -83,13 +83,13 @@ func main() {
 		ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 		defer cancel()
 		r, err := c.SayHello(ctx, &notification.HelloRequest{Name: name})
-		log.Printf("Client Greeting: Hello server")
+		log.Println(i, "Client Greeting: Hello server")
 
 		if err != nil {
 			log.Fatalf("could not greet: %v", err)
 		}
 
-		log.Printf("Server Greeting: %s", r)
+		log.Println("Server Greeting: ", r)
 		time.Sleep(100 * time.Millisecond)
 	}
 
@@ -98,11 +98,13 @@ func main() {
 		log.Fatalf("%v.RecordRoute(_) = _, %v", c, err)
 	}
 
-	for i := 0; i < 100; i++ {
+	for i := 0; i < 300; i++ {
+		log.Println("Streaming ", i)
 		if err := stream.Send(&notification.HelloRequest{Name: name}); err != nil {
 			log.Fatalf("%v.Send() = %v", stream, err)
-			time.Sleep(10 * time.Millisecond)
 		}
+
+		time.Sleep(100 * time.Millisecond)
 	}
 
 	exit <- true
